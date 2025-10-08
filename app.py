@@ -11,10 +11,10 @@ st.set_page_config(page_title="Custom Data Graph Plotter", layout="wide")
 
 # Image path check (using a simpler path for robustness, assuming assets folder exists)
 try:
-    st.image("assets/Graphycs.png", width=1000)
+    st.image("assets/GraPhycs.png", width=1000)
 except Exception:
     # Fallback in case image is missing
-    st.image("https://flic.kr/ps/46XweX", width=1000)
+    st.image("GraPhycs.png", width=1000)
 
 st.title("Graphycs 📊")
 st.subheader("Physics Experiment Data Graph Plotter")
