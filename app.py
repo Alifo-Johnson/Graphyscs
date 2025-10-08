@@ -1,6 +1,6 @@
 import streamlit as st
 import numpy as np
-import matplotlib.pyplot as plt
+import matplotlib.pyplot
 from scipy.stats import linregress
 import io # Required for the download button
 
