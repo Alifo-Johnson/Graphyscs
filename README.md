@@ -1,2 +1,2 @@
-# Graphyscs
-Physics Experiment Graph Plotter
+# thrashStream
+Graphys Plotter

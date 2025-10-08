@@ -1,0 +1,46 @@
+import streamlit as st
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Set the page title
+st.title("Custom Data Graph Plotter")
+st.markdown("Enter your data as a comma-separated list of numbers for each axis, then click 'Plot Data'.")
+
+# Create text input fields for x and y values
+x_input = st.text_input("Enter X values (e.g., 1, 2, 3, 4, 5)")
+y_input = st.text_input("Enter Y values (e.g., 1, 4, 9, 16, 25)")
+
+# Create a button to trigger the plot
+if st.button("Plot Data"):
+    # Check if inputs are not empty
+    if x_input and y_input:
+        try:
+            # Convert the comma-separated strings to lists of numbers
+            x_values = [float(val.strip()) for val in x_input.split(',')]
+            y_values = [float(val.strip()) for val in y_input.split(',')]
+
+            # Ensure the lists have the same number of elements
+            if len(x_values) != len(y_values):
+                st.error("The number of X values must match the number of Y values.")
+            else:
+                # Create the plot
+                fig, ax = plt.subplots()
+
+                # Plot the user-provided data
+                ax.plot(x_values, y_values, marker='o', linestyle='-')
+
+                # Add labels and a title to the plot
+                ax.set_xlabel("X-axis")
+                ax.set_ylabel("Y-axis")
+                ax.set_title("Plot of User-Provided Data")
+
+                # Add a grid for better readability
+                ax.grid(True)
+
+                # Display the plot in the Streamlit app
+                st.pyplot(fig)
+
+        except ValueError:
+            st.error("Invalid input. Please ensure all values are numbers and separated by commas.")
+    else:
+        st.warning("Please enter data for both the X and Y axes.")
