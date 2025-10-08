@@ -14,7 +14,7 @@ try:
     st.image("assets/Graphycs.png", width=1000)
 except Exception:
     # Fallback in case image is missing
-    st.image("https://via.placeholder.com/1000x200?text=Graphycs+Logo+Missing", width=1000)
+    st.image("https://flic.kr/ps/46XweX", width=1000)
 
 st.title("Graphycs 📊")
 st.subheader("Physics Experiment Data Graph Plotter")
