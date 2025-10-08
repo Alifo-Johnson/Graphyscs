@@ -9,7 +9,10 @@ import io # Required for the download button
 # Set the page title and description
 # st.image("Graphycs.png", width=200) # NOTE: Uncomment if you have this image file
 
+
 st.set_page_config(page_title="Custom Data Graph Plotter", layout="wide")
+
+st.image("assets/Graphycs.png", width=1000) # Ensure you have this image in the correct path or comment out
 
 st.title("Graphycs 📊")
 st.subheader("Physics Experiment Data Graph Plotter")
